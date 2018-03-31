@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71AC0E102BC5B10467A33941701B9E61"
-               BuildableName = "Pods_HomeService.framework"
-               BlueprintName = "Pods-HomeService"
+               BlueprintIdentifier = "738B2050D3EE6CEF2F8FC5020EAB44A1"
+               BuildableName = "paper_onboarding.framework"
+               BlueprintName = "paper-onboarding"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71AC0E102BC5B10467A33941701B9E61"
-            BuildableName = "Pods_HomeService.framework"
-            BlueprintName = "Pods-HomeService"
+            BlueprintIdentifier = "738B2050D3EE6CEF2F8FC5020EAB44A1"
+            BuildableName = "paper_onboarding.framework"
+            BlueprintName = "paper-onboarding"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

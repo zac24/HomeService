@@ -12,5 +12,6 @@ target 'HomeService' do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
+    pod 'GoogleSignIn'
 
 end

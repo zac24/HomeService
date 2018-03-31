@@ -9,5 +9,8 @@ target 'HomeService' do
 	pod 'Hero'
    	pod 'paper-onboarding'
 	pod 'Alamofire'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
 
 end

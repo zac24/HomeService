@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95A3AAFB4D2AA0899F33132D /* Pods_HomeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E766EAE74F3E9608AD11A17E /* Pods_HomeService.framework */; };
+		CE49FCF0207029F200410159 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCEF207029F200410159 /* LoginViewController.swift */; };
 		CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9668206D7EEE0066D36E /* AppDelegate.swift */; };
 		CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B966A206D7EEE0066D36E /* ViewController.swift */; };
 		CE7B966E206D7EEE0066D36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B966C206D7EEE0066D36E /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		19AA99CB8FCA630D35DD2863 /* Pods-HomeService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeService.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeService/Pods-HomeService.release.xcconfig"; sourceTree = "<group>"; };
 		216D897DB83DE2EC536B58F6 /* Pods-HomeService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeService/Pods-HomeService.debug.xcconfig"; sourceTree = "<group>"; };
+		CE49FCEF207029F200410159 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE7B9665206D7EEE0066D36E /* HomeService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7B9668206D7EEE0066D36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7B966A206D7EEE0066D36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE49FCEE206FFD6700410159 /* Login & Signup */ = {
+			isa = PBXGroup;
+			children = (
+				CE49FCEF207029F200410159 /* LoginViewController.swift */,
+			);
+			path = "Login & Signup";
+			sourceTree = "<group>";
+		};
 		CE7B965C206D7EEE0066D36E = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		CE7B9667206D7EEE0066D36E /* HomeService */ = {
 			isa = PBXGroup;
 			children = (
+				CE49FCEE206FFD6700410159 /* Login & Signup */,
 				CE7B967F206FB26E0066D36E /* Onboarding */,
 				CE7B967C206E38140066D36E /* Launch Screen */,
 				CE7B967E206E38420066D36E /* StoryBoards */,
@@ -254,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE49FCF0207029F200410159 /* LoginViewController.swift in Sources */,
 				CE7B9683206FBCC60066D36E /* Constants.swift in Sources */,
 				CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */,
 				CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */,

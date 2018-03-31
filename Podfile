@@ -7,6 +7,6 @@ target 'HomeService' do
 
   # Pods for HomeService
 	pod "Hero"
-	pod 'paper-onboarding'
+    pod "paper-onboarding"
 
 end

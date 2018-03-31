@@ -14,6 +14,8 @@
 		CE7B9670206D7EEE0066D36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7B966F206D7EEE0066D36E /* Assets.xcassets */; };
 		CE7B9673206D7EEE0066D36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B9671206D7EEE0066D36E /* LaunchScreen.storyboard */; };
 		CE7B967B206E38070066D36E /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B967A206E38070066D36E /* LaunchScreenVC.swift */; };
+		CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */; };
+		CE7B9683206FBCC60066D36E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9682206FBCC50066D36E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		CE7B9672206D7EEE0066D36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7B9674206D7EEE0066D36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7B967A206E38070066D36E /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTutorialView.swift; sourceTree = "<group>"; };
+		CE7B9682206FBCC50066D36E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E766EAE74F3E9608AD11A17E /* Pods_HomeService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,12 +84,14 @@
 		CE7B9667206D7EEE0066D36E /* HomeService */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B967F206FB26E0066D36E /* Onboarding */,
+				CE7B967C206E38140066D36E /* Launch Screen */,
 				CE7B967E206E38420066D36E /* StoryBoards */,
-				CE7B967D206E38280066D36E /* View Controllers */,
 				CE7B9668206D7EEE0066D36E /* AppDelegate.swift */,
 				CE7B966A206D7EEE0066D36E /* ViewController.swift */,
 				CE7B966F206D7EEE0066D36E /* Assets.xcassets */,
 				CE7B9674206D7EEE0066D36E /* Info.plist */,
+				CE7B9682206FBCC50066D36E /* Constants.swift */,
 			);
 			path = HomeService;
 			sourceTree = "<group>";
@@ -98,14 +104,6 @@
 			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
-		CE7B967D206E38280066D36E /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CE7B967C206E38140066D36E /* Launch Screen */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		CE7B967E206E38420066D36E /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +111,14 @@
 				CE7B9671206D7EEE0066D36E /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		CE7B967F206FB26E0066D36E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7B9683206FBCC60066D36E /* Constants.swift in Sources */,
 				CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */,
+				CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */,
 				CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */,
 				CE7B967B206E38070066D36E /* LaunchScreenVC.swift in Sources */,
 			);
@@ -386,11 +394,20 @@
 			baseConfigurationReference = 216D897DB83DE2EC536B58F6 /* Pods-HomeService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U5554WP3S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Hero\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/paper-onboarding\"",
+				);
 				INFOPLIST_FILE = HomeService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.B2C.HomeService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -401,11 +418,15 @@
 			baseConfigurationReference = 19AA99CB8FCA630D35DD2863 /* Pods-HomeService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U5554WP3S;
 				INFOPLIST_FILE = HomeService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.B2C.HomeService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

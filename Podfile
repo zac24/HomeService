@@ -6,5 +6,6 @@ target 'HomeService' do
   use_frameworks!
 
   # Pods for HomeService
+	pod "Hero"
 
 end

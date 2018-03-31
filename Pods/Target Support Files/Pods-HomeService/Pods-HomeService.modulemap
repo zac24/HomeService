@@ -1,0 +1,6 @@
+framework module Pods_HomeService {
+  umbrella header "Pods-HomeService-umbrella.h"
+
+  export *
+  module * { export * }
+}

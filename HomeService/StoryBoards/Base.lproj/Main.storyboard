@@ -130,7 +130,7 @@
                                             <constraint firstAttribute="height" constant="1" id="Hzq-E1-fXo"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in or Sign up to book our services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-6A-BNr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in or Sign up to book our services" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-6A-BNr">
                                         <rect key="frame" x="36" y="149" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,10 +167,12 @@
                                 <constraints>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="5Mw-sC-prl"/>
                                     <constraint firstItem="WVD-te-eDO" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="6vr-9d-qWV"/>
+                                    <constraint firstAttribute="trailing" secondItem="vA9-M0-jvw" secondAttribute="trailing" constant="35" id="7CO-FU-JOR"/>
                                     <constraint firstItem="8yk-DL-gFI" firstAttribute="height" secondItem="rle-lf-Bj6" secondAttribute="height" id="8cM-x6-2hY"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="centerY" secondItem="oba-Lr-P0b" secondAttribute="centerY" id="AZp-6p-nk7"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="top" secondItem="WVD-te-eDO" secondAttribute="bottom" constant="56.5" id="AeB-8t-fPE"/>
                                     <constraint firstItem="vA9-M0-jvw" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="E5g-jW-uAa"/>
+                                    <constraint firstItem="vA9-M0-jvw" firstAttribute="leading" secondItem="oba-Lr-P0b" secondAttribute="leading" constant="36" id="EME-sJ-hCx"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="width" secondItem="Ejb-6A-BNr" secondAttribute="width" id="HPY-qi-Jog"/>
                                     <constraint firstItem="WVD-te-eDO" firstAttribute="trailing" secondItem="Ejb-6A-BNr" secondAttribute="trailing" id="NAG-Wq-uYN"/>
                                     <constraint firstItem="Ejb-6A-BNr" firstAttribute="centerX" secondItem="oba-Lr-P0b" secondAttribute="centerX" id="NT7-c3-JFW"/>

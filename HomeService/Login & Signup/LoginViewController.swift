@@ -18,8 +18,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViews()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupViews() {
+        self.googleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0)
+        self.facebookButton.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0)
     }
 
     override func didReceiveMemoryWarning() {

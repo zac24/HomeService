@@ -13,6 +13,7 @@
             <string>AvenirNext-Bold</string>
         </array>
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
         </array>
     </customFonts>
@@ -149,21 +150,24 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rle-lf-Bj6">
                                         <rect key="frame" x="36" y="418" width="145" height="44"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="8ns-qC-9hi"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="facebook" image="facebook">
                                             <color key="titleColor" red="0.27450980392156865" green="0.3529411764705882" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yk-DL-gFI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yk-DL-gFI">
                                         <rect key="frame" x="195" y="418" width="145" height="44"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Google" image="google">
                                             <color key="titleColor" red="0.27450980390000002" green="0.35294117650000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="5Mw-sC-prl"/>
                                     <constraint firstItem="WVD-te-eDO" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="6vr-9d-qWV"/>

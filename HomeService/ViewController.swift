@@ -30,21 +30,17 @@ class ViewController: UIViewController, PaperOnboardingDataSource, PaperOnboardi
     }
     
     func onboardingItemAtIndex(_ index: Int) -> OnboardingItemInfo {
-        let backgroundColorOne = UIColor(red: 217/255, green: 72/255, blue: 89/355, alpha: 1)
-        let backgroundColorTwo = UIColor(red: 106/255, green: 166/255, blue: 211/355, alpha: 1)
-        let backgroundColorThree = UIColor(red: 168/255, green: 200/255, blue: 78/355, alpha: 1)
         
         let titleFont = UIFont(name: "AvenirNext-Bold", size: 24)!
         let descriptionFont = UIFont(name: "AvenirNext-Regular", size: 18)!
         
         let firstImage = UIImage(named:"HomeService app_icon")
-//        let emptyImage : UIImage? = nil
+        let emptyImage : UIImage? = UIImage()
         
-        return[(firstImage,FIRST_INTROSCREEN_TITLE_STRING, FIRST_INTROSCREEN_DESCRIPTION_STRING, firstImage,backgroundColorOne,UIColor.white,UIColor.white,titleFont,descriptionFont),
-            (firstImage,Second_INTROSCREEN_TITLE_STRING,SECOND_INTROSCREEN_DESCRIPTION_STRING, firstImage, backgroundColorTwo, UIColor.white,UIColor.white, titleFont, descriptionFont),
-            (firstImage,THIRD_INTROSCREEN_TITLE_STRING,THIRD_INTROSCREEN_DESCRIPTION_STRING, firstImage, backgroundColorThree, UIColor.white,UIColor.white, titleFont, descriptionFont),
-            (firstImage,FOURTH_INTROSCREEN_TITLE_STRING,FOURTH_INTROSCREEN_DESCRIPTION_STRING, firstImage, backgroundColorOne, UIColor.white,UIColor.white, titleFont, descriptionFont)][index] as! OnboardingItemInfo
-        
+        return[(firstImage,Onboarding.FIRST_INTROSCREEN_TITLE_STRING, Onboarding.FIRST_INTROSCREEN_DESCRIPTION_STRING, emptyImage,OnboardingBackgroundColor.backgroundColorOne,UIColor.white,UIColor.white,titleFont,descriptionFont),
+            (firstImage,Onboarding.Second_INTROSCREEN_TITLE_STRING,Onboarding.SECOND_INTROSCREEN_DESCRIPTION_STRING, emptyImage, OnboardingBackgroundColor.backgroundColorTwo, UIColor.white,UIColor.white, titleFont, descriptionFont),
+            (firstImage,Onboarding.THIRD_INTROSCREEN_TITLE_STRING,Onboarding.THIRD_INTROSCREEN_DESCRIPTION_STRING, emptyImage, OnboardingBackgroundColor.backgroundColorThree, UIColor.white,UIColor.white, titleFont, descriptionFont),
+            (firstImage, Onboarding.FOURTH_INTROSCREEN_TITLE_STRING,Onboarding.FOURTH_INTROSCREEN_DESCRIPTION_STRING, emptyImage, OnboardingBackgroundColor.backgroundColorFourth, UIColor.white,UIColor.white, titleFont, descriptionFont)][index] as! OnboardingItemInfo
         
     }
     
@@ -62,12 +58,19 @@ class ViewController: UIViewController, PaperOnboardingDataSource, PaperOnboardi
     
     func onboardingDidTransitonToIndex(_ index: Int) {
         if index == 3 {
-            UIView.animate(withDuration: 04, animations: {
+            UIView.animate(withDuration: 0.4, animations: {
                 self.getStartedButton.alpha = 1
             })
         }
     }
     
+    @IBAction func getStartedButtonClicked(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.set("true", forKey: "onboardingCompleted")
+        userDefaults.synchronize()
+        
+    }
     
     
     override func didReceiveMemoryWarning() {

@@ -9,9 +9,12 @@ target 'HomeService' do
 	pod 'Hero'
    	pod 'paper-onboarding'
 	pod 'Alamofire'
+    pod 'GoogleSignIn'
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
-    pod 'GoogleSignIn'
+    pod 'SwiftyJSON'
+    pod 'ObjectMapper', '~> 3.1'
+    
 
 end

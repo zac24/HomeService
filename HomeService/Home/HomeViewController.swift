@@ -1,14 +1,14 @@
 //
-//  LaunchScreenVC.swift
+//  HomeViewController.swift
 //  HomeService
 //
-//  Created by Prashant Dwivedi on 4/1/18.
+//  Created by Prashant Dwivedi on 4/5/18.
 //  Copyright © 2018 Prashant Dwivedi. All rights reserved.
 //
 
 import UIKit
 
-class LaunchScreenVC: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

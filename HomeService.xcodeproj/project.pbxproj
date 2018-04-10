@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		95A3AAFB4D2AA0899F33132D /* Pods_HomeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E766EAE74F3E9608AD11A17E /* Pods_HomeService.framework */; };
 		CE49FCF0207029F200410159 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCEF207029F200410159 /* LoginViewController.swift */; };
+		CE49FCF22071084700410159 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF12071084700410159 /* LaunchScreenVC.swift */; };
+		CE49FCF520766E5200410159 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF420766E5200410159 /* HomeViewController.swift */; };
+		CE49FCF82078E96C00410159 /* HSUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF72078E96C00410159 /* HSUrl.swift */; };
+		CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF9207AA15000410159 /* HSNetworkManager.swift */; };
+		CE49FCFE207AA26500410159 /* HSRegitserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCFD207AA26500410159 /* HSRegitserModel.swift */; };
 		CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9668206D7EEE0066D36E /* AppDelegate.swift */; };
 		CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B966A206D7EEE0066D36E /* ViewController.swift */; };
 		CE7B966E206D7EEE0066D36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B966C206D7EEE0066D36E /* Main.storyboard */; };
 		CE7B9670206D7EEE0066D36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7B966F206D7EEE0066D36E /* Assets.xcassets */; };
 		CE7B9673206D7EEE0066D36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B9671206D7EEE0066D36E /* LaunchScreen.storyboard */; };
-		CE7B967B206E38070066D36E /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B967A206E38070066D36E /* LaunchScreenVC.swift */; };
 		CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */; };
 		CE7B9683206FBCC60066D36E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9682206FBCC50066D36E /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +27,11 @@
 		19AA99CB8FCA630D35DD2863 /* Pods-HomeService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeService.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeService/Pods-HomeService.release.xcconfig"; sourceTree = "<group>"; };
 		216D897DB83DE2EC536B58F6 /* Pods-HomeService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeService/Pods-HomeService.debug.xcconfig"; sourceTree = "<group>"; };
 		CE49FCEF207029F200410159 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE49FCF12071084700410159 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		CE49FCF420766E5200410159 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE49FCF72078E96C00410159 /* HSUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSUrl.swift; sourceTree = "<group>"; };
+		CE49FCF9207AA15000410159 /* HSNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSNetworkManager.swift; sourceTree = "<group>"; };
+		CE49FCFD207AA26500410159 /* HSRegitserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSRegitserModel.swift; sourceTree = "<group>"; };
 		CE7B9665206D7EEE0066D36E /* HomeService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7B9668206D7EEE0066D36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7B966A206D7EEE0066D36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +39,6 @@
 		CE7B966F206D7EEE0066D36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7B9672206D7EEE0066D36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7B9674206D7EEE0066D36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE7B967A206E38070066D36E /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTutorialView.swift; sourceTree = "<group>"; };
 		CE7B9682206FBCC50066D36E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E766EAE74F3E9608AD11A17E /* Pods_HomeService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,9 +76,42 @@
 		CE49FCEE206FFD6700410159 /* Login & Signup */ = {
 			isa = PBXGroup;
 			children = (
+				CE49FCFC207AA24F00410159 /* Model */,
 				CE49FCEF207029F200410159 /* LoginViewController.swift */,
 			);
 			path = "Login & Signup";
+			sourceTree = "<group>";
+		};
+		CE49FCF320766E3A00410159 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE49FCF420766E5200410159 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE49FCF62078E91C00410159 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE49FCF72078E96C00410159 /* HSUrl.swift */,
+				CE49FCF9207AA15000410159 /* HSNetworkManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE49FCFB207AA24300410159 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CE49FCFC207AA24F00410159 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE49FCFD207AA26500410159 /* HSRegitserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CE7B965C206D7EEE0066D36E = {
@@ -94,6 +135,9 @@
 		CE7B9667206D7EEE0066D36E /* HomeService */ = {
 			isa = PBXGroup;
 			children = (
+				CE49FCFB207AA24300410159 /* New Group */,
+				CE49FCF62078E91C00410159 /* Utils */,
+				CE49FCF320766E3A00410159 /* Home */,
 				CE49FCEE206FFD6700410159 /* Login & Signup */,
 				CE7B967F206FB26E0066D36E /* Onboarding */,
 				CE7B967C206E38140066D36E /* Launch Screen */,
@@ -110,7 +154,7 @@
 		CE7B967C206E38140066D36E /* Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
-				CE7B967A206E38070066D36E /* LaunchScreenVC.swift */,
+				CE49FCF12071084700410159 /* LaunchScreenVC.swift */,
 			);
 			path = "Launch Screen";
 			sourceTree = "<group>";
@@ -258,6 +302,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -274,6 +319,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +338,12 @@
 				CE7B9683206FBCC60066D36E /* Constants.swift in Sources */,
 				CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */,
 				CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */,
+				CE49FCF82078E96C00410159 /* HSUrl.swift in Sources */,
 				CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */,
-				CE7B967B206E38070066D36E /* LaunchScreenVC.swift in Sources */,
+				CE49FCF520766E5200410159 /* HomeViewController.swift in Sources */,
+				CE49FCF22071084700410159 /* LaunchScreenVC.swift in Sources */,
+				CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */,
+				CE49FCFE207AA26500410159 /* HSRegitserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

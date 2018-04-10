@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct UserRegister: Decodable {
-    let id : Int?
+//    let id : Int?
     let name : String?
     let email : String?
     let phone : String?
@@ -23,33 +23,33 @@ struct UserRegister: Decodable {
     let otp : String?
     let isVerified : String?
     let isSocial : String?
-    let referCodeStatus : Bool?
+//    let referCodeStatus : Bool?
     let referToCode : String?
     let country : String?
     let status : String?
     let token : String?
     let deviceId : String?
-    let cities : [String]?
-    let tax : [Tax]?
-    let userName : String?
+//    let cities : [String]?
+//    let tax : [Tax]?
+//    let userName : String?
     
 }
-
-struct Tax : Decodable {
-    let deviceId : Int?
-    let financialYear : String?
-    let country : String?
-    let name : String?
-    let state : String?
-    let taxCode : String?
-    let value : Int?
-    
-}
-
-struct UserName : Decodable {
-    let email : String?
-    let phone : String?
-}
+//
+//struct Tax : Decodable {
+//    let deviceId : Int?
+//    let financialYear : String?
+//    let country : String?
+//    let name : String?
+//    let state : String?
+//    let taxCode : String?
+//    let value : Int?
+//
+//}
+//
+//struct UserName : Decodable {
+//    let email : String?
+//    let phone : String?
+//}
 
 
 /*

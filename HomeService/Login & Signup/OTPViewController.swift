@@ -1,16 +1,15 @@
 //
-//  HomeViewController.swift
+//  OTPViewController.swift
 //  HomeService
 //
-//  Created by Prashant Dwivedi on 4/5/18.
+//  Created by Prashant Dwivedi on 4/11/18.
 //  Copyright © 2018 Prashant Dwivedi. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class OTPViewController: UIViewController {
 
-    var otp:String!
     override func viewDidLoad() {
         super.viewDidLoad()
 

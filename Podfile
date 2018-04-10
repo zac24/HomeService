@@ -14,7 +14,7 @@ target 'HomeService' do
     pod 'FacebookLogin'
     pod 'FacebookShare'
     pod 'SwiftyJSON'
-    pod 'ObjectMapper', '~> 3.1'
+    pod 'AlamofireObjectMapper', '~> 5.0'
     
 
 end

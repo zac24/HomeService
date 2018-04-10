@@ -14,6 +14,7 @@
 		CE49FCF82078E96C00410159 /* HSUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF72078E96C00410159 /* HSUrl.swift */; };
 		CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF9207AA15000410159 /* HSNetworkManager.swift */; };
 		CE49FCFE207AA26500410159 /* HSRegitserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCFD207AA26500410159 /* HSRegitserModel.swift */; };
+		CE49FD00207D479100410159 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCFF207D479100410159 /* OTPViewController.swift */; };
 		CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9668206D7EEE0066D36E /* AppDelegate.swift */; };
 		CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B966A206D7EEE0066D36E /* ViewController.swift */; };
 		CE7B966E206D7EEE0066D36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B966C206D7EEE0066D36E /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		CE49FCF72078E96C00410159 /* HSUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSUrl.swift; sourceTree = "<group>"; };
 		CE49FCF9207AA15000410159 /* HSNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSNetworkManager.swift; sourceTree = "<group>"; };
 		CE49FCFD207AA26500410159 /* HSRegitserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSRegitserModel.swift; sourceTree = "<group>"; };
+		CE49FCFF207D479100410159 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		CE7B9665206D7EEE0066D36E /* HomeService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7B9668206D7EEE0066D36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7B966A206D7EEE0066D36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				CE49FCFC207AA24F00410159 /* Model */,
 				CE49FCEF207029F200410159 /* LoginViewController.swift */,
+				CE49FCFF207D479100410159 /* OTPViewController.swift */,
 			);
 			path = "Login & Signup";
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HomeService/Pods-HomeService-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -302,12 +306,14 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -319,6 +325,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
@@ -340,6 +347,7 @@
 				CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */,
 				CE49FCF82078E96C00410159 /* HSUrl.swift in Sources */,
 				CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */,
+				CE49FD00207D479100410159 /* OTPViewController.swift in Sources */,
 				CE49FCF520766E5200410159 /* HomeViewController.swift in Sources */,
 				CE49FCF22071084700410159 /* LaunchScreenVC.swift in Sources */,
 				CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */,

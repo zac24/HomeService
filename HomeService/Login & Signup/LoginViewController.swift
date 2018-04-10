@@ -12,6 +12,7 @@ import FacebookLogin
 import FacebookCore
 import Alamofire
 import SwiftyJSON
+import AlamofireObjectMapper
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
@@ -22,8 +23,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var fbButtonView: UIView!
     
-    var registerUserResponse = [UserRegister]()
-    
+    var registerUserResponse:[UserRegister] = []
+    var registerResponse : JSON!
     
     let facebookButton : UIButton = {
         let fbButton  = UIButton(type:.custom)
@@ -37,9 +38,15 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        
         view.addSubview(facebookButton)
         facebookButton.anchor(top: continueButton.bottomAnchor, paddingTop: 63, left: continueButton.leftAnchor, paddingLeft:0, bottom: nil, paddingBottom: 0, right: googleButton.leftAnchor, paddingRight: -37, width: googleButton.frame.width, height: 44)
 
+    }
+    
+    func setupViews() {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @objc func loginButtonClicked() {
@@ -80,10 +87,38 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func ContinueButtonTapped(_ sender: Any) {
         let requestUrl = registerUserUrl ()
-        Alamofire.request(requestUrl, method: .post, parameters: ["phone":"7506930095"], encoding: JSONEncoding.default, headers: nil).responseJSON {
-            (response)
-            in
-            let result = response.result.value
+        Alamofire.request(requestUrl, method: .post, parameters: ["phone":"1234567890"], encoding: JSONEncoding.default, headers: nil).responseData {
+            (response) in
+            debugPrint("All Response Info: \(response)")
+            if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)")
+                
+//                do {
+//                    self.registerUserResponse = try JSONDecoder().decode([UserRegister].self, from: data)
+//                }
+//                catch {
+//                    print ("error parsing json")
+//                }
+            }
+//            let [UserRegister] = Mapper<UserRegister>.map(JSONObject:response.result.value)
+            
+            switch response.result {
+            case .success(let value):
+               self.registerResponse = JSON(value)
+                
+                print("JSON: \(self.registerResponse)")
+                print(self.registerResponse["otp"])
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeSegueID" {
+            if let vc = segue.destination as? HomeViewController {
+                vc.otp = self.registerResponse["otp"].string
+            }
         }
     }
 }

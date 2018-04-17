@@ -12,7 +12,9 @@ import FacebookLogin
 import FacebookCore
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
 import AlamofireObjectMapper
+
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
@@ -23,6 +25,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var fbButtonView: UIView!
     
+    private var manager: SessionManager?
     var registerUserResponse:[UserRegister] = []
     var registerResponse : JSON!
     
@@ -42,6 +45,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         
         view.addSubview(facebookButton)
         facebookButton.anchor(top: continueButton.bottomAnchor, paddingTop: 63, left: continueButton.leftAnchor, paddingLeft:0, bottom: nil, paddingBottom: 0, right: googleButton.leftAnchor, paddingRight: -37, width: googleButton.frame.width, height: 44)
+        
+        self.manager = Alamofire.SessionManager.default
 
     }
     
@@ -86,38 +91,70 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func ContinueButtonTapped(_ sender: Any) {
+        
         let requestUrl = registerUserUrl ()
-        Alamofire.request(requestUrl, method: .post, parameters: ["phone":"1234567890"], encoding: JSONEncoding.default, headers: nil).responseData {
-            (response) in
-            debugPrint("All Response Info: \(response)")
-            if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)")
-                
-//                do {
-//                    self.registerUserResponse = try JSONDecoder().decode([UserRegister].self, from: data)
-//                }
-//                catch {
-//                    print ("error parsing json")
-//                }
-            }
-//            let [UserRegister] = Mapper<UserRegister>.map(JSONObject:response.result.value)
-            
+        
+        self.manager?.request(requestUrl, method: .post, parameters: ["phone":"7506930095"], encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
-            case .success(let value):
-               self.registerResponse = JSON(value)
-                
-                print("JSON: \(self.registerResponse)")
-                print(self.registerResponse["otp"])
+            case .success:
+                //to get JSON return value
+                guard let responseJSON = response.result.value as? Dictionary<String, Any>
+                    else {
+                    //failure(0,"Error reading response")
+                    return
+                }
+                guard let userProfile:[UserRegister] = Mapper<UserRegister>().mapArray(JSONArray: [responseJSON]) else {
+//                    failure(0,"Error mapping response")
+                    return
+                }
+                self.registerUserResponse = userProfile
+                print(self.registerUserResponse)
+                if((userProfile[0].otp) != nil){
+                    self.performSegue(withIdentifier: "HomeSegueID", sender: self)
+                }
+                print("userProfile ..\(String(describing: userProfile[0].otp))")
+            //completion(userProfile)
             case .failure(let error):
-                print(error)
+            //failure(0,"Error \(error)")
+            print("error ..\(error)")
+                
             }
+            
         }
+        
+        
+//        let requestUrl = registerUserUrl ()
+//        Alamofire.request(requestUrl, method: .post, parameters: ["phone":"1234567890"], encoding: JSONEncoding.default, headers: nil).responseData {
+//            (response) in
+//            debugPrint("All Response Info: \(response)")
+//            if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {
+//                print("Data: \(utf8Text)")
+//                
+////                do {
+////                    self.registerUserResponse = try JSONDecoder().decode([UserRegister].self, from: data)
+////                }
+////                catch {
+////                    print ("error parsing json")
+////                }
+//            }
+////            let [UserRegister] = Mapper<UserRegister>.map(JSONObject:response.result.value)
+//            
+//            switch response.result {
+//            case .success(let value):
+//               self.registerResponse = JSON(value)
+//                
+//                print("JSON: \(self.registerResponse)")
+//                print(self.registerResponse["otp"])
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeSegueID" {
-            if let vc = segue.destination as? HomeViewController {
-                vc.otp = self.registerResponse["otp"].string
+            if let vc = segue.destination as? OTPViewController {
+//                vc.otp = self.registerResponse["otp"].string
             }
         }
     }

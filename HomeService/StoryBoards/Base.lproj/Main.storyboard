@@ -13,8 +13,12 @@
             <string>AvenirNext-Bold</string>
         </array>
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -83,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="864"/>
         </scene>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="39E-2Z-s4J">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="ods-cT-YPZ" customClass="HomeViewController" customModule="HomeService" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="ods-cT-YPZ" customClass="OTPViewController" customModule="HomeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7gf-bz-Ygi"/>
                         <viewControllerLayoutGuide type="bottom" id="60a-gg-NTv"/>
@@ -94,13 +98,68 @@
                     <view key="view" contentMode="scaleToFill" id="qxu-GU-cxI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JgN-95-Ap4">
+                                <rect key="frame" x="40" y="233.5" width="295" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP sent to 7506930095" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqs-en-T2D">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OTP" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-pX-RIL">
+                                        <rect key="frame" x="0.0" y="42" width="295" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 min, 52 sec" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyH-HA-dx8">
+                                        <rect key="frame" x="0.0" y="94.5" width="295" height="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tb-oq-N5u">
+                                        <rect key="frame" x="0.0" y="134.5" width="295" height="29"/>
+                                        <color key="backgroundColor" red="1" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't receive your verification code yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-um-MEA">
+                                        <rect key="frame" x="0.0" y="186" width="295" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="kMo-8c-nL5"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYd-dM-TeC">
+                                <rect key="frame" x="139" y="453.5" width="97" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Resend OTP"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JgN-95-Ap4" firstAttribute="centerY" secondItem="qxu-GU-cxI" secondAttribute="centerY" id="6PW-jO-A02"/>
+                            <constraint firstItem="JgN-95-Ap4" firstAttribute="leading" secondItem="qxu-GU-cxI" secondAttribute="leading" constant="40" id="9zj-e0-0J6"/>
+                            <constraint firstItem="fYd-dM-TeC" firstAttribute="centerX" secondItem="qxu-GU-cxI" secondAttribute="centerX" id="CWr-Ie-LHu"/>
+                            <constraint firstAttribute="trailing" secondItem="JgN-95-Ap4" secondAttribute="trailing" constant="40" id="Ip6-pb-JuO"/>
+                            <constraint firstItem="JgN-95-Ap4" firstAttribute="centerX" secondItem="qxu-GU-cxI" secondAttribute="centerX" id="O2K-DP-NzJ"/>
+                            <constraint firstItem="fYd-dM-TeC" firstAttribute="top" secondItem="JgN-95-Ap4" secondAttribute="bottom" constant="20" id="hKg-Bg-ECQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b2f-II-I3X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y5-jX-Kzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="133"/>
+            <point key="canvasLocation" x="1424.8" y="132.68365817091455"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="GMw-RF-cNz">
@@ -150,8 +209,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="ContinueButtonTapped:" destination="LbD-Fv-lHB" eventType="touchUpInside" id="HGW-bM-iAc"/>
-                                            <segue destination="ods-cT-YPZ" kind="show" identifier="HomeSegueID" id="fY4-rt-il6"/>
+                                            <action selector="ContinueButtonTapped:" destination="LbD-Fv-lHB" eventType="touchUpInside" id="wOZ-yZ-BP3"/>
+                                            <segue destination="ods-cT-YPZ" kind="show" identifier="HomeSegueID" animates="NO" id="fY4-rt-il6"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-dU-mJw" customClass="GIDSignInButton">

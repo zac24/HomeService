@@ -22,6 +22,7 @@
 		CE7B9673206D7EEE0066D36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B9671206D7EEE0066D36E /* LaunchScreen.storyboard */; };
 		CE7B9681206FB3CE0066D36E /* OnboardingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */; };
 		CE7B9683206FBCC60066D36E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9682206FBCC50066D36E /* Constants.swift */; };
+		CED33A70207F9DF70090E4B4 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED33A6F207F9DF60090E4B4 /* UserRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		CE7B9674206D7EEE0066D36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7B9680206FB3CE0066D36E /* OnboardingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTutorialView.swift; sourceTree = "<group>"; };
 		CE7B9682206FBCC50066D36E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CED33A6F207F9DF60090E4B4 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		E766EAE74F3E9608AD11A17E /* Pods_HomeService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CE49FCFD207AA26500410159 /* HSRegitserModel.swift */,
+				CED33A6F207F9DF60090E4B4 /* UserRegister.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				CE49FD00207D479100410159 /* OTPViewController.swift in Sources */,
 				CE49FCF520766E5200410159 /* HomeViewController.swift in Sources */,
 				CE49FCF22071084700410159 /* LaunchScreenVC.swift in Sources */,
+				CED33A70207F9DF70090E4B4 /* UserRegister.swift in Sources */,
 				CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */,
 				CE49FCFE207AA26500410159 /* HSRegitserModel.swift in Sources */,
 			);

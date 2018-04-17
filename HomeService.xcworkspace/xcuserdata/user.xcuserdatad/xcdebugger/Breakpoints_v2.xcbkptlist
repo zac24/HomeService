@@ -20,13 +20,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeService/Login &amp; Signup/LoginViewController.swift"
-            timestampString = "545080066.768937"
+            timestampString = "545665038.410247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "ContinueButtonTapped(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in HomeService.LoginViewController.ContinueButtonTapped(Any) -&gt; ()"
+                  moduleName = "HomeService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Prashant/HomeService/HomeService/Login%20&amp;%20Signup/LoginViewController.swift"
+                  timestampString = "545383303.458956"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "1285">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in HomeService.LoginViewController.ContinueButtonTapped(Any) -&gt; ()"
+                  moduleName = "HomeService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Prashant/HomeService/HomeService/Login%20&amp;%20Signup/LoginViewController.swift"
+                  timestampString = "545383303.464498"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "1984">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    var otp:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

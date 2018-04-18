@@ -156,6 +156,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b2f-II-I3X"/>
+                    <connections>
+                        <outlet property="enterOtpLabel" destination="oqs-en-T2D" id="77N-qR-dlG"/>
+                        <outlet property="loginButton" destination="0Tb-oq-N5u" id="QqU-Lb-41o"/>
+                        <outlet property="otpTextField" destination="MV3-pX-RIL" id="NgS-hI-aRR"/>
+                        <outlet property="resendOtpButton" destination="fYd-dM-TeC" id="S3e-PT-nX6"/>
+                        <outlet property="timerLabel" destination="ZyH-HA-dx8" id="Yrh-wC-qEk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y5-jX-Kzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +184,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-M0-jvw">
-                                        <rect key="frame" x="36" y="210" width="304" height="44"/>
+                                        <rect key="frame" x="36" y="226.5" width="304" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ljd-Ks-WhI"/>
                                         </constraints>
@@ -186,14 +193,14 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="tel"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVD-te-eDO">
-                                        <rect key="frame" x="36" y="254" width="304" height="1"/>
+                                        <rect key="frame" x="36" y="270.5" width="304" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Hzq-E1-fXo"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in or Sign up to book our services" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-6A-BNr">
-                                        <rect key="frame" x="36" y="149" width="304" height="21"/>
+                                        <rect key="frame" x="36" y="165.5" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -210,15 +217,14 @@
                                         </state>
                                         <connections>
                                             <action selector="ContinueButtonTapped:" destination="LbD-Fv-lHB" eventType="touchUpInside" id="wOZ-yZ-BP3"/>
-                                            <segue destination="ods-cT-YPZ" kind="show" identifier="HomeSegueID" animates="NO" id="fY4-rt-il6"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-dU-mJw" customClass="GIDSignInButton">
-                                        <rect key="frame" x="206.5" y="418" width="133.5" height="44"/>
+                                        <rect key="frame" x="206.5" y="395.5" width="133.5" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebg-hM-0ro">
-                                        <rect key="frame" x="36" y="418" width="133.5" height="44"/>
+                                        <rect key="frame" x="36" y="395.5" width="133.5" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BbK-Q2-HIf"/>
@@ -231,7 +237,7 @@
                                     <constraint firstItem="WVD-te-eDO" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="6vr-9d-qWV"/>
                                     <constraint firstAttribute="trailing" secondItem="vA9-M0-jvw" secondAttribute="trailing" constant="35" id="7CO-FU-JOR"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="centerY" secondItem="oba-Lr-P0b" secondAttribute="centerY" id="AZp-6p-nk7"/>
-                                    <constraint firstItem="J6s-Gd-BzB" firstAttribute="top" secondItem="WVD-te-eDO" secondAttribute="bottom" constant="56.5" id="AeB-8t-fPE"/>
+                                    <constraint firstItem="J6s-Gd-BzB" firstAttribute="top" secondItem="WVD-te-eDO" secondAttribute="bottom" constant="40" id="AeB-8t-fPE"/>
                                     <constraint firstItem="vA9-M0-jvw" firstAttribute="leading" secondItem="Ejb-6A-BNr" secondAttribute="leading" id="E5g-jW-uAa"/>
                                     <constraint firstItem="vA9-M0-jvw" firstAttribute="leading" secondItem="oba-Lr-P0b" secondAttribute="leading" constant="36" id="EME-sJ-hCx"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="width" secondItem="Ejb-6A-BNr" secondAttribute="width" id="HPY-qi-Jog"/>
@@ -246,7 +252,7 @@
                                     <constraint firstItem="Ebg-hM-0ro" firstAttribute="height" secondItem="Eco-dU-mJw" secondAttribute="height" id="hfY-xZ-ivA"/>
                                     <constraint firstItem="vA9-M0-jvw" firstAttribute="top" secondItem="Ejb-6A-BNr" secondAttribute="bottom" constant="40" id="iSd-r9-rxZ"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="centerX" secondItem="oba-Lr-P0b" secondAttribute="centerX" id="ihZ-eV-8cv"/>
-                                    <constraint firstItem="Ebg-hM-0ro" firstAttribute="top" secondItem="J6s-Gd-BzB" secondAttribute="bottom" constant="62.5" id="oLs-zp-0SX"/>
+                                    <constraint firstItem="Ebg-hM-0ro" firstAttribute="top" secondItem="J6s-Gd-BzB" secondAttribute="bottom" constant="40" id="oLs-zp-0SX"/>
                                     <constraint firstItem="vA9-M0-jvw" firstAttribute="width" secondItem="Ejb-6A-BNr" secondAttribute="width" id="qvM-Tz-Cuo"/>
                                     <constraint firstItem="vA9-M0-jvw" firstAttribute="centerX" secondItem="oba-Lr-P0b" secondAttribute="centerX" id="t0T-TM-jFN"/>
                                     <constraint firstItem="J6s-Gd-BzB" firstAttribute="trailing" secondItem="Ejb-6A-BNr" secondAttribute="trailing" id="tgX-2Q-EGg"/>
@@ -270,6 +276,7 @@
                         <outlet property="googleButton" destination="Eco-dU-mJw" id="mCx-bE-2AI"/>
                         <outlet property="phoneNumberTextField" destination="vA9-M0-jvw" id="VAZ-QW-Ocb"/>
                         <outlet property="signInLabel" destination="Ejb-6A-BNr" id="QnR-m5-ftR"/>
+                        <segue destination="ods-cT-YPZ" kind="show" identifier="HomeSegueID" id="NZG-k1-Fkc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x83-Ov-Noj" userLabel="First Responder" sceneMemberID="firstResponder"/>

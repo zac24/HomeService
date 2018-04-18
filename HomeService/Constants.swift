@@ -32,3 +32,7 @@ enum OnboardingBackgroundColor {
     static let backgroundColorFourth = UIColor(red: 225/255, green: 112/255, blue: 85/355, alpha: 1)
     
 }
+
+enum OTPViewScreen {
+    static let OTP_LABEL_TEXT   =   "Enter OTP sent to "
+}

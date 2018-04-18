@@ -15,6 +15,7 @@
 		CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCF9207AA15000410159 /* HSNetworkManager.swift */; };
 		CE49FCFE207AA26500410159 /* HSRegitserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCFD207AA26500410159 /* HSRegitserModel.swift */; };
 		CE49FD00207D479100410159 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49FCFF207D479100410159 /* OTPViewController.swift */; };
+		CE555F6720865F4200C2454C /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE555F6620865F4200C2454C /* extension.swift */; };
 		CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B9668206D7EEE0066D36E /* AppDelegate.swift */; };
 		CE7B966B206D7EEE0066D36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B966A206D7EEE0066D36E /* ViewController.swift */; };
 		CE7B966E206D7EEE0066D36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B966C206D7EEE0066D36E /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		CE49FCF9207AA15000410159 /* HSNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSNetworkManager.swift; sourceTree = "<group>"; };
 		CE49FCFD207AA26500410159 /* HSRegitserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSRegitserModel.swift; sourceTree = "<group>"; };
 		CE49FCFF207D479100410159 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		CE555F6620865F4200C2454C /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		CE7B9665206D7EEE0066D36E /* HomeService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7B9668206D7EEE0066D36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7B966A206D7EEE0066D36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				CE49FCF72078E96C00410159 /* HSUrl.swift */,
 				CE49FCF9207AA15000410159 /* HSNetworkManager.swift */,
+				CE555F6620865F4200C2454C /* extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				CE7B9669206D7EEE0066D36E /* AppDelegate.swift in Sources */,
 				CE49FD00207D479100410159 /* OTPViewController.swift in Sources */,
 				CE49FCF520766E5200410159 /* HomeViewController.swift in Sources */,
+				CE555F6720865F4200C2454C /* extension.swift in Sources */,
 				CE49FCF22071084700410159 /* LaunchScreenVC.swift in Sources */,
 				CED33A70207F9DF70090E4B4 /* UserRegister.swift in Sources */,
 				CE49FCFA207AA15100410159 /* HSNetworkManager.swift in Sources */,

@@ -10,16 +10,28 @@ import UIKit
 
 class OTPViewController: UIViewController {
 
-    var otp:String!
+    public var otp : String!
+    public var userMobileNumber : String!
+    @IBOutlet weak var enterOtpLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    @IBOutlet weak var otpTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var resendOtpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-
-        // Do any additional setup after loading the view.
+        
+//        var timer = Timer.scheduledTimer(withTimeInterval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
+        
     }
     
     func setupViews() {
+        
+        enterOtpLabel.text = OTPViewScreen.OTP_LABEL_TEXT + userMobileNumber
         self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
